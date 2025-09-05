@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title><!--Antonia Garcés Solar--></title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/2.0.4/p5.min.js" integrity="sha512-rOTpdy9fXlcLeLxPj5H4pof51FAx2lVK8Soexk8yTek9wrenwm56MKT2VddH8GCDd4a2js2i4GwezlUkbGdVQg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+        ></script>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body id="cuerpo">
+        <main id="bloque">
+            <!--editar lo que sigue-->
+            <h1>Bonjour le Monde! 💫</h1>
+            <h2>Mon nom est<a href="https://github.com/antogarcess" target="_pink"> Antonia Garcés S,</a></h2>
+            <p>Je suis étudiant en design industriel:)</p>
+            <!--no sigas editando desde acá-->
+            <p>Esta es mi primera prueba de <a href="https://github.com/profesorfaco/opr" target="_pink">Introducción al Desarrollo Web desde el Diseño</a>, un Optativo de Profundización de la <a href="https://diseno.uc.cl/" target="_pink">Escuela de Diseño UC</a>.</p>
+            <p>Aquí puedes echarle un vistazo a las páginas que preparé usando <code>HTML</code>, <code>CSS</code> y <code>p5.js</code>, una bibliteca de <code>JavaScript</code>:</p>
+            <nav>
+                <a href="index.html">Portada</a> 
+                <a href="page-1.html">Primera interior</a> 
+                <a href="page-2.html" class="active">Segunda interior</a>
+            </nav>
+            <p>En la segunda página interior puedes ver cómo adapto <a href="https://p5js.org/examples/" target="_blank">un ejemplo</a> de p5.js a página completa. El ejemplo se llama [completar con lo que corresponda]</p>
+        </main>
+        <script>
+        var canvas;
+
+        function setup() {
+        canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+        canvas.parent("cuerpo");
+        canvas.position(0, 0);
+        canvas.style("z-index", "-1");
+
+        angleMode(DEGREES);
+        strokeWeight(5);
+        noFill();
+        stroke(32, 8, 64);
+
+        describe("Users can click and drag to orbit the 3D scene with purple cubes on a pink background.");
+         }
+
+        function draw() {
+        background(213, 39, 106);
+        orbitControl();
+
+        for (let zAngle = 0; zAngle < 180; zAngle += 30) {
+          for (let xAngle = 0; xAngle < 360; xAngle += 30) {
+            push();
+            rotateZ(zAngle);
+            rotateX(xAngle);
+            translate(0, 400, 0);
+            box();
+            pop();
+          }
+        }
+      }
+
+      function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+      }
+    </script>
+  </body>
+
+    
+        </script>
+    </body>
+</html>
