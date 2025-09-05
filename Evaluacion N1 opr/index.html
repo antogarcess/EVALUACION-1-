@@ -51,10 +51,9 @@ function setup() {
 }
 
 function draw() {
-  // Cada vez que el mouse se mueve, dibuja un círculo
   if (mouseIsPressed || (mouseX != pmouseX || mouseY != pmouseY)) {
-    let r = random(10, 50); // radio aleatorio entre 10 y 50
-    fill(255, 100, 150, 150); // color con algo de transparencia
+    let r = random(10, 50)
+    fill(255, 100, 150, 150)
     noStroke();
     ellipse(mouseX, mouseY, r);
   }
